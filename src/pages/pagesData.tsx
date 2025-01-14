@@ -3,7 +3,7 @@ import Home from './Home';
 
 const pagesData: routerType[] = [
   {
-    path: '',
+    path: '/broke-af',
     element: <Home />,
     title: 'home',
   },
