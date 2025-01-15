@@ -4,7 +4,7 @@ import Router from './pages/router';
 
 function App() {
   return (
-    <HashRouter basename='/broke-af'>
+    <HashRouter>
       <Router />
     </HashRouter>
   );
