@@ -1,12 +1,16 @@
+import { forwardRef } from 'react';
+
 const features = [
   { emoji: '📈', title: 'Real stock prices, fake consequences.' },
   { emoji: '🤡', title: 'Compete with friends to see who loses less!' },
   { emoji: '🤑', title: 'Learn trading without filing bankruptcy.' },
 ];
 
-const Features = () => {
+interface FeaturesProps {}
+
+const Features = forwardRef<HTMLDivElement, FeaturesProps>((_props, ref) => {
   return (
-    <section id='features' className='py-10 bg-gray-100'>
+    <section id='features' className='py-10 bg-gray-100' ref={ref}>
       <h2 className='text-3xl font-bold text-center mb-6'>Why BrokeAF?</h2>
       <div className='flex flex-wrap justify-center gap-6'>
         {features.map((feature, index) => (
@@ -20,6 +24,6 @@ const Features = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Features;

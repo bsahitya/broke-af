@@ -1,6 +1,6 @@
 {
   "name": "broke-af",
-  "homepage": "https://bsahitya.github.io/broke-af/#",
+  "homepage": "https://bsahitya.github.io/broke-af/",
   "private": false,
   "version": "0.0.0",
   "type": "module",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
+    "firebase": "^11.1.0",
     "gh-pages": "^6.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

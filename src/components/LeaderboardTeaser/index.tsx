@@ -1,8 +1,9 @@
-import { Popover } from '@headlessui/react';
+import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
+import { forwardRef } from 'react';
 
-const LeaderboardTeaser = () => {
+const LeaderboardTeaser = forwardRef<HTMLDivElement>((_props, ref) => {
   return (
-    <section id='leaderboard' className='py-10 bg-blue-50'>
+    <section ref={ref} id='leaderboard' className='py-10 bg-blue-50'>
       <h2 className='text-3xl font-bold text-center mb-6'>
         Can You Beat These Legends?
       </h2>
@@ -11,19 +12,19 @@ const LeaderboardTeaser = () => {
         <p>Emily: Bankrupted 7 times</p>
         <p>Mike: +$500,000 (But he cheated)</p>
         <Popover className='relative'>
-          <Popover.Button className='mt-4 bg-yellow-400 text-black px-6 py-3 rounded hover:bg-yellow-300'>
+          <PopoverButton className='mt-4 bg-yellow-400 text-black px-6 py-3 rounded hover:bg-yellow-300'>
             Join the Madness
-          </Popover.Button>
-          <Popover.Panel className='absolute z-10 mt-2 w-64 bg-white shadow-lg p-4 rounded'>
+          </PopoverButton>
+          <PopoverPanel className='absolute z-10 mt-2 w-64 bg-white shadow-lg p-4 rounded'>
             <p className='text-sm text-gray-600'>
               Joining the madness is easy. Just click the button and start
               losing fake money!
             </p>
-          </Popover.Panel>
+          </PopoverPanel>
         </Popover>
       </div>
     </section>
   );
-};
+});
 
 export default LeaderboardTeaser;

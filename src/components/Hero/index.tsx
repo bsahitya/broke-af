@@ -1,4 +1,9 @@
-import { Dialog } from '@headlessui/react';
+import {
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  Description,
+} from '@headlessui/react';
 import { useState } from 'react';
 
 const Hero = () => {
@@ -8,7 +13,7 @@ const Hero = () => {
     <section className='text-center py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white'>
       <div className='max-w-2xl mx-auto'>
         <img
-          src='/piggy.svg' // Replace with your actual logo path
+          src='piggy.svg' // Replace with your actual logo path
           alt='Sad Piggy Bank Logo'
           className='w-32 h-32 mx-auto mb-6'
         />
@@ -20,11 +25,11 @@ const Hero = () => {
         </p>
         <div className='space-x-4'>
           <button
-            className='bg-yellow-400 text-black px-6 py-3 rounded hover:bg-yellow-300'
+            className='bg-yellow-400 text-black px-6 py-3 mt-3 rounded hover:bg-yellow-300'
             onClick={() => setIsOpen(true)}>
             Start Losing Fake Money
           </button>
-          <button className='bg-white text-blue-600 px-6 py-3 rounded hover:bg-gray-200'>
+          <button className='bg-white text-blue-600 px-6 py-3 mt-3 rounded hover:bg-gray-200'>
             Watch the Chaos
           </button>
         </div>
@@ -34,19 +39,17 @@ const Hero = () => {
         onClose={() => setIsOpen(false)}
         className='fixed inset-0 z-10'>
         <div className='flex items-center justify-center min-h-screen'>
-          <Dialog.Panel className='bg-white p-6 rounded shadow-lg'>
-            <Dialog.Title className='text-lg font-bold'>
-              Get Started
-            </Dialog.Title>
-            <Dialog.Description className='mt-2 text-gray-500'>
+          <DialogPanel className='bg-white p-6 rounded shadow-lg'>
+            <DialogTitle className='text-lg font-bold'>Get Started</DialogTitle>
+            <Description className='mt-2 text-gray-500'>
               Ready to lose some fake money? Let&apos;s dive in!
-            </Dialog.Description>
+            </Description>
             <button
               className='mt-4 bg-red-500 text-white px-4 py-2 rounded'
               onClick={() => setIsOpen(false)}>
               Close
             </button>
-          </Dialog.Panel>
+          </DialogPanel>
         </div>
       </Dialog>
     </section>
