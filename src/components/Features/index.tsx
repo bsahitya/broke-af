@@ -8,7 +8,7 @@ const features = [
 
 interface FeaturesProps {}
 
-const Features = forwardRef<HTMLDivElement, FeaturesProps>((_props, ref) => {
+const Features = forwardRef<HTMLDivElement>((_props, ref) => {
   return (
     <section id='features' className='py-10 bg-gray-100' ref={ref}>
       <h2 className='text-3xl font-bold text-center mb-6'>Why BrokeAF?</h2>

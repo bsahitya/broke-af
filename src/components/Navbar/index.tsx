@@ -19,7 +19,9 @@ const Navbar = ({ scrollToSection }: NavbarProps) => {
           onClick={() => scrollToSection('leaderboard')}>
           Leaderboard
         </a>
-        <button className='bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300'>
+        <button
+          className='bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300'
+          onClick={() => scrollToSection('login')}>
           Start Losing Money
         </button>
       </div>
